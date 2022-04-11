@@ -1,0 +1,66 @@
+.sidebar__input-wrapper {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    width: 200px;
+    position: relative;
+}
+
+.sidebar__input-label {
+    position: absolute;
+    color: #fff;
+    left: 10px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.sidebar__input {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: all .1s linear;
+}
+
+.sidebar__input:focus {
+    width: 260px;
+    padding: 10px;
+    z-index: 4;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    // outline: 1px solid #fff;
+    background-color: #fff;
+    color: #000;
+}
+
+.sidebar__input-suggestions-list {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 5;
+    transition: all .1s linear;
+    background-color: #fff;
+}
+
+.sidebar__input-suggestion {
+    width: 260px;
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: all .3s linear;
+}
+
+
+.sidebar__input-suggestion.active {
+    background-color: rgb(163, 163, 163);
+}

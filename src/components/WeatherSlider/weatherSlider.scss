@@ -1,0 +1,118 @@
+.slider-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin: 0 0 30px;
+}
+
+.slider-buttons-wrapper {
+    display: flex;
+}
+
+.slider-btn {
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.slider-btn:hover {
+    box-shadow: inset 0 0 15px 1px rgba(255, 255, 255, .5);
+}
+
+.slick-slider {
+    padding: 10px 80px;
+    position: relative;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .1s linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slick-next {
+    transform: translate(-300%, -50%);
+    right: 0;
+    background-image: url('../../img/slider-btn/btn-next.svg');
+}
+
+.slick-prev {
+    transform: translate(200%, -50%);
+    left: 0;
+    background-image: url('../../img/slider-btn/btn-prev.svg');
+}
+
+.slick-next:hover {
+    transform: translate(-300%, -50%) scale(1.15);
+}
+
+.slick-prev:hover {
+    transform: translate(200%, -50%) scale(1.15);
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    color: #fff;
+}
+
+.slider-item__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    min-height: 170px;
+    min-width: 170px;
+    max-width: 200px;
+    border-radius: 20%;
+    background-color: #fff;
+    margin: 0 30px 0 0;
+    padding: 10px 0;
+}
+
+.slider-item__day {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.slider-item__icon {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin: 0 0 20px;
+}
+
+.slider-item__icon img {
+    object-fit: none;
+}
+
+.slider-item__temp {
+    font-size: 18px;
+}

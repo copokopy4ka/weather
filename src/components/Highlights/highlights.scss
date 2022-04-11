@@ -1,0 +1,164 @@
+.highlights {
+    &__title {
+        color: #fff;
+        font-size: 20px;
+        margin: 0 0 20px;
+    }
+    
+    &-content {
+        display: flex;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: calc((100% / 3) * 2);
+        margin: 0 10px 0 0;
+    }
+    
+    &__item {
+        font-size: 16px;
+        width: 30%;
+        min-height: 220px;
+        margin: 0 0 30px;
+        padding: 25px 20px;
+        background-color: rgba(0, 0, 0, .2);
+        color: #fff;
+        border-radius: 20px;
+    }
+
+    &__item:nth-child(4),
+    &__item:nth-child(5),
+    &__item:last-child {
+        margin: 0;
+    }
+    
+    &__item-title {
+        font-size: 20px;
+        margin: 0 0 25px;
+
+        &.uv {
+            margin: 0 0 40px;
+        }
+    }
+
+    &__item-uv-content {
+        position: relative;
+    }
+
+    &__item-uv-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item-uv-index {
+        max-width: 90%;
+    }
+
+    &__item-uv-num {
+        position: absolute;
+        font-size: 20px;
+        &.one {
+            bottom: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &.six {
+            top: 0;
+            left: 0;
+            transform: translate(350%, -100%);
+        }
+
+        &.nine {
+            top: 0;
+            right: 0;
+            transform: translate(-350%, -100%);
+        }
+
+        &.twelve {
+            bottom: 0;
+            right: 0;
+            transform: translate(75%, -50%);
+        }
+    }
+    
+    &__item-uv-value {
+        display: inline;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2em;
+        line-height: 1;
+    }
+
+    &__item-uv-img {
+        max-width: 200px;
+        max-height: 103px;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__item-wind-value,
+    &__item-wind-name {
+        font-size: 20px;
+    }
+
+    &__item-wind-value.highlights__item-value {
+        margin: 0 0 20px;
+    }
+
+    &__item-sunrise,
+    &__item-sunset {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__item-sunrise {
+        margin: 0 0 15px;
+    }
+
+    &__item-sun-icon {
+        max-width: 2em;
+        margin: 0 10px 0 0;
+    }
+    
+    &__item-humidity {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    &__item-value {
+        margin: 0 0 10px;
+    }
+    
+    &__item-humidity-icon {
+        width: 1em;
+        height: 4em;
+        border-radius: 15px;
+        background-color: #fff;
+        border-bottom-width: 70% solid blue;
+    }
+
+    &__item-temp-max,
+    &__item-temp-min {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    &__item-temp-max {
+        margin: 0 0 15px;
+    }
+    
+    &__item-temp-icon {
+        max-width: 2em;
+        margin: 0 10px 0 0;
+    }
+}
