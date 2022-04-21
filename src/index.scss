@@ -1,3 +1,6 @@
+@import 'mixins';
+@import 'vars';
+
 html,
 body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
@@ -59,4 +62,83 @@ textarea {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px 35px 20px 335px;
+
+    @include breakpoint ($laptop) {
+        padding: 20px 50px 20px 50px;
+    }
+}
+
+.weather-sidebar__burger-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 30px;
+    height: 25px;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: transform .3s linear;
+
+    @include breakpoint($laptop) {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.weather-sidebar__burger-span,
+.weather-sidebar__burger-btn:after,
+.weather-sidebar__burger-btn:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 25%;
+    transition: all .3s linear;
+}
+
+.weather-sidebar__burger-span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.weather-sidebar__burger-btn:after {
+    top: 0;
+}
+
+.weather-sidebar__burger-btn:before {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.weather-sidebar__burger-btn.active {
+    transform: rotate(180deg);
+
+    .weather-sidebar__burger-span {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:after,
+    &:before {
+        top: 50%;
+        transform-origin: center;
+    }
+
+    &:before {
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:after {
+        transform: translateY(-50%) rotate(135deg);
+    }
 }

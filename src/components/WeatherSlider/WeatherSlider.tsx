@@ -16,17 +16,17 @@ const WeatherSlider = () => {
         slidesToScroll: 1,
         responsive: [
             {
-              breakpoint: 1200,
+              breakpoint: 1260,
               settings: {
                 slidesToShow: 3
               }
             },
-            {
-              breakpoint: 1050,
-              settings: {
-                slidesToShow: 2,
-              }
-            }
+            // {
+            //   breakpoint: 1050,
+            //   settings: {
+            //     slidesToShow: 2,
+            //   }
+            // }
         ]
     }
     let weatherArr = weatherMetric;
@@ -46,7 +46,7 @@ const WeatherSlider = () => {
     }
 
     return (
-        <div>
+        <div className="slider-wrapper">
             <div className="slider-buttons">
                 <div className="slider-buttons-wrapper">
                     <Button

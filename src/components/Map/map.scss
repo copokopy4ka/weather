@@ -1,5 +1,13 @@
+@import '../../mixins';
+@import '../../vars';
+
 .map-container {
     width: 320px;
     height: 540px;
     border-radius: 20px;
+
+    @include breakpoint ($desktop) {
+        width: 100%;
+        height: 400px;
+    }
 }

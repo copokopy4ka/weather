@@ -24,7 +24,7 @@ const Highlights = () => {
                             <div className="highlights__item-uv-value">{weatherMetric.current.uvi}</div>
                             <div className="highlights__item-uv-img">
                                 <span className="highlights__item-uv-num one">1</span>
-                                <span className="highlights__item-uv-num six">3</span>
+                                <span className="highlights__item-uv-num three">3</span>
                                 <span className="highlights__item-uv-num nine">9</span>
                                 <span className="highlights__item-uv-num twelve">12</span>
                                 <svg className="highlights__item-uv-index" x="0px" y="0px"

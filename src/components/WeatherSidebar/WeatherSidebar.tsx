@@ -65,7 +65,7 @@ const WeatherSidebar = () => {
                     <div className="weather-sidebar__day">{getDay(weatherMetric.current.dt)}, {getTime(weatherMetric.current.dt)}</div>
                 </div>
                 <div className="weather-sidebar__icon">
-                    <img src={getIcon(weatherMetric.current.weather[0].icon)} alt="weather-icon" />
+                    <img className="weather-sidebar__img" src={getIcon(weatherMetric.current.weather[0].icon)} alt="weather icon" />
                 </div>
             </div>
             <div className="weather-sidebar__details">

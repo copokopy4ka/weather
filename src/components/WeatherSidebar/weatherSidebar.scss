@@ -1,3 +1,6 @@
+@import '../../mixins';
+@import '../../vars';
+
 .weather-sidebar {
     padding: 30px 20px;
     position: absolute;
@@ -8,12 +11,28 @@
     color: #fff;
     max-width: 300px;
     width: 100%;
+    z-index: 10;
+    transition: transform .2s linear;
+
+    @include breakpoint ($laptop) {
+        transform: translateX(-100%);
+        padding: 50px 20px 30px;
+        background-color: rgba(0, 0, 0, .4);
+    }
+}
+
+.weather-sidebar.active {
+    transform: translateX(0);
 }
 
 .weather-sidebar__header {
     display: flex;
     justify-content: space-between;
     margin: 0 0 20px;
+
+    @include breakpoint ($laptop) {
+        position: relative;
+    }
 }
 
 .weather-sidebar__btn {
@@ -29,6 +48,12 @@
         height: 20px;
         transition: transform .2s linear;
     }
+
+    @include breakpoint ($laptop) {
+        position: absolute;
+        top: -110%;
+        right: 0;
+    }
 }
 
 .weather-sidebar__btn:hover img {
@@ -43,7 +68,9 @@
 }
 
 .weather-sidebar__temp {
+    text-align: center;
     font-size: 30px;
+    min-width: 55px;
 }
 
 .weather-sidebar__place-description {
